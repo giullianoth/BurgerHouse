@@ -3,6 +3,9 @@
         @include fullWidth;
         padding: 50px 0;
 
+        @include absolute;
+        z-index: 10;
+
         &_content {
             @include containerWidth;
             @include flex;
@@ -49,10 +52,9 @@
                         font-family: $font-bebas-neue;
                         font-size: 1.4em;
 
-                        li {
-                            a {
-                                color: $color-bistre;
-                            }
+                        a {
+                            color: $color-bistre;
+                            letter-spacing: 0.2em;
                         }
                     }
                 }

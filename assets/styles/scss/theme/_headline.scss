@@ -1,0 +1,104 @@
+@include theme() {
+    &_headline {
+        @include fullWidth;
+        height: 100vh;
+
+        @include backgroundImage("../../images/background_headline.png");
+
+        &_content {
+            @include containerWidth;
+            @include flex;
+            height: 100%;
+
+            &_headline {
+                @include flex2;
+
+                &_slogan {
+                    border: 2px dashed $color-bistre;
+                    display: inline-block;
+                    padding: 8px 14px;
+
+                    font-size: 1.4em;
+                    font-family: $font-bebas-neue;
+                    color: $color-bistre;
+
+                    margin-bottom: 40px;
+                }
+
+                &_title {
+                    h1 {
+                        font-size: 3.4em;
+                        line-height: 1.6em;
+                        text-shadow: 3px 3px 0 $color-white;
+
+                        span {
+                            display: block;
+                            font-size: 2em;
+                        }
+                    }
+                }
+            }
+
+            &_image {
+                @include flex2;
+                @include relative;
+                height: 100%;
+
+                &_img {
+                    @include absolute(50%, 50%);
+                    transform: translate(-50%, -50%);
+                    width: 130%;
+                }
+
+                &_price {
+                    @include absolute(unset, -40px);
+                    bottom: 10%;
+                    width: 174px;
+                    height: 174px;
+                    background-color: $color-fire-brick;
+
+                    color: $color-white;
+                    font-family: $font-bebas-neue;
+                    font-size: 1.8em;
+
+                    @include rounded;
+
+                    @include flex;
+
+                    &::before {
+                        content: "";
+                        @include absolute(50%, 50%);
+                        transform: translate(-50%, -50%);
+                        width: 82%;
+                        height: 82%;
+                        border: 2px dashed $color-white;
+
+                        @include rounded;
+                    }
+
+                    p {
+                        & > span {
+                            display: block;
+                            text-align: center;
+                            line-height: 1;
+                        }
+
+                        .font1 {
+                            font-size: 2.6em;
+                        }
+    
+                        .font2 {
+                            font-size: 0.9em;
+                        }
+    
+                        .font3 {
+                            text-align: center;
+                            letter-spacing: 0.5em;
+                            padding-left: 0.5em;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
