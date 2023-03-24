@@ -1,0 +1,27 @@
+@import url("https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Bebas+Neue&family=Montserrat:wght@400;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  color: #3D3D3D;
+}
+body h1, body h2, body h3, body h4, body h5, body h6 {
+  font-family: "Alfa Slab One", cursive;
+  color: #3D2514;
+}
+body a {
+  text-decoration: none;
+}
+body ul li {
+  list-style-type: none;
+}
+body img {
+  display: block;
+  width: 100%;
+}

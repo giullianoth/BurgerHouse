@@ -1,0 +1,60 @@
+// THEME
+@mixin theme() {
+    .bh {
+        @content;
+    }
+}
+
+// CONTAINER WIDTH
+@mixin containerWidth($maxWidth: $container-max-width, $paddingX: 20px, $paddingY: 0) {
+    max-width: $maxWidth;
+    margin: 0 auto;
+    padding: $paddingY $paddingX;
+}
+
+@mixin fullWidth() {
+    width: 100%;
+}
+
+// BROWSERS CORE
+@mixin setBrowsersCore($attr, $value, $cores: $browsers-core-default) {
+    #{$attr}: #{$value};
+
+    @each $core in $cores {
+        -#{$core}-#{$attr}: #{$value};
+    }
+}
+
+// FLEXBOX
+@mixin flex($justifyContent: center, $alignItems: center, $flexWrap: wrap) {
+    display: flex;
+    justify-content: $justifyContent;
+    align-items: $alignItems;
+    flex-wrap: $flexWrap;
+}
+
+@mixin flexBasis($basis, $gap: 0) {
+    @if $gap != 0 {
+        flex-basis: calc($basis - $gap);
+    }
+
+    @else {
+        flex-basis: $basis;
+    }
+}
+
+@mixin flex1($gap: 0) {
+    @include flexBasis(100%, $gap);
+}
+
+@mixin flex2($gap: 0) {
+    @include flexBasis(calc(100% / 2), $gap);
+}
+
+@mixin flex3($gap: 0) {
+    @include flexBasis(calc(100% / 3), $gap);
+}
+
+@mixin flex4($gap: 0) {
+    @include flexBasis(calc(100% / 4), $gap);
+}
