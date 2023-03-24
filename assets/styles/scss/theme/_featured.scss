@@ -1,0 +1,67 @@
+@include theme() {
+    &_featured {
+        @include fullWidth;
+
+        &_content {
+            @include containerWidth;
+            @include flex;
+            gap: 40px;
+
+            padding: 40px;
+
+            &_main {
+                @include flex2(40px);
+            }
+
+            &_secondaries {
+                @include flex2(40px);
+                @include flex;
+                gap: 40px;
+
+                &_secondary {
+                    @include flex1;
+                }
+            }
+
+            .featured {
+                @include relative;
+                @include borderRadius;
+                overflow: hidden;
+                cursor: pointer;
+
+                &:hover {
+                    .featured_image {
+                        transform: scale(1.2);
+                    }
+                }
+
+                &_image {
+                    @include transition;
+                }
+
+                &_title {
+                    @include absolute;
+                    padding: 30px;
+                    color: $color-white;
+                    font-family: $font-bebas-neue;
+
+                    p {
+                        font-size: 1.4em;
+                    }
+
+                    h1 {
+                        font-family: inherit;
+                        color: inherit;
+                        font-size: 2.8em;
+                        font-weight: normal;
+                        line-height: 0.8em;
+
+                        span {
+                            display: block;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
