@@ -97,3 +97,8 @@
     background-size: $size;
     background-position: $position;
 }
+
+// TRANSITION
+@mixin transition($property: all, $duration: 0.3s, $timingFunction: ease, $delay: 0s) {
+    transition: $property $duration $timingFunction $delay;
+}

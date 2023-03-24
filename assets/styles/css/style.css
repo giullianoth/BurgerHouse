@@ -92,6 +92,10 @@ body img {
 .bh_header_content_nav_menu ul a {
   color: #3D2514;
   letter-spacing: 0.2em;
+  transition: all 0.3s ease 0s;
+}
+.bh_header_content_nav_menu ul a:hover {
+  color: #BF2222;
 }
 
 .bh_headline {

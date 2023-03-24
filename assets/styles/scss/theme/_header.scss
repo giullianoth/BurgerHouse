@@ -55,6 +55,12 @@
                         a {
                             color: $color-bistre;
                             letter-spacing: 0.2em;
+
+                            @include transition;
+
+                            &:hover {
+                                color: $color-fire-brick;
+                            }
                         }
                     }
                 }
