@@ -16,6 +16,9 @@ body h1, body h2, body h3, body h4, body h5, body h6 {
   color: #3D2514;
   text-transform: uppercase;
 }
+body h1 {
+  font-size: 3.4em;
+}
 body a {
   text-decoration: none;
 }
@@ -129,7 +132,6 @@ body img {
   margin-bottom: 40px;
 }
 .bh_headline_content_headline_title h1 {
-  font-size: 3.4em;
   line-height: 1.6em;
   text-shadow: 3px 3px 0 #FFF;
 }
@@ -210,7 +212,7 @@ body img {
   align-items: center;
   flex-wrap: wrap;
   gap: 40px;
-  padding: 40px;
+  padding: 80px 40px;
 }
 .bh_featured_content_main {
   flex-basis: calc(50% - 40px);
@@ -260,4 +262,73 @@ body img {
 }
 .bh_featured_content .featured_title h1 span {
   display: block;
+}
+
+.bh_menu {
+  width: 100%;
+}
+.bh_menu_content {
+  max-width: 1328px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+.bh_menu_content_title {
+  text-align: center;
+}
+.bh_menu_content_title .subtitle {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #FFC045;
+  font-family: "Bebas Neue", cursive;
+  font-size: 1.4em;
+  color: #3D2514;
+  margin-bottom: 20px;
+}
+.bh_menu_content_title .title {
+  margin-bottom: 20px;
+}
+.bh_menu_content_info {
+  text-align: center;
+  margin-bottom: 60px;
+}
+.bh_menu_content_menu {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  flex-wrap: wrap;
+}
+.bh_menu_content_menu_item {
+  flex-basis: 33.3333333333%;
+}
+.bh_menu_content_menu_item_title {
+  padding: 0 30px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+.bh_menu_content_menu_item_title h2 {
+  font-family: "Bebas Neue", cursive;
+  font-size: 1.6em;
+}
+.bh_menu_content_menu_item_desc {
+  padding: 0 30px;
+  text-align: center;
+  margin-bottom: 30px;
+}
+.bh_menu_content_menu_item_action {
+  text-align: center;
+}
+.bh_menu_content_menu_item_action a {
+  display: inline-block;
+  background-color: #BF2222;
+  color: #FFF;
+  font-family: "Alfa Slab One", cursive;
+  text-transform: uppercase;
+  padding: 12px 24px;
+  border: 1px solid transparent;
+  transition: all 0.3s ease 0s;
+}
+.bh_menu_content_menu_item_action a:hover {
+  color: #BF2222;
+  background-color: transparent;
+  border-color: #BF2222;
 }
