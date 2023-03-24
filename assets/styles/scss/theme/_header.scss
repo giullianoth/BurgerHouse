@@ -1,0 +1,62 @@
+@include theme() {
+    &_header {
+        @include fullWidth;
+        padding: 50px 0;
+
+        &_content {
+            @include containerWidth;
+            @include flex;
+
+            &_logo {
+                @include flex2;
+
+                h1 {
+                    display: none;
+                }
+
+                img {
+                    width: 260px;
+                }
+            }
+
+            &_nav {
+                @include flex2;
+                @include flex;
+                gap: 30px;
+
+                &_contact {
+                    @include flex1;
+
+                    p {                        
+                        @include flex(flex-end);
+                        font-weight: 700;
+                        color: $color-bistre;
+                    }
+
+                    img {
+                        display: inline-block;
+                        width: 40px;
+                        margin-right: 20px;
+                    }
+                }
+
+                &_menu {
+                    @include flex1;
+
+                    ul {
+                        @include flex(flex-end);
+                        column-gap: 60px;
+                        font-family: $font-bebas-neue;
+                        font-size: 1.4em;
+
+                        li {
+                            a {
+                                color: $color-bistre;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
