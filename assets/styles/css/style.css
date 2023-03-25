@@ -332,3 +332,66 @@ body img {
   background-color: transparent;
   border-color: #BF2222;
 }
+
+.bh_slides {
+  width: 100%;
+  margin: 80px 0;
+}
+.bh_slides_content {
+  max-width: 1328px;
+  margin: 0 auto;
+  padding: 0 20px;
+  padding: 30px;
+  background-color: #FFF;
+  box-shadow: 10px 10px 50px rgba(0, 0, 0, 0.2);
+  position: relative;
+}
+.bh_slides_content_slide {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+.bh_slides_content_slide_info {
+  flex-basis: 50%;
+  padding: 30px;
+}
+p:not(.bh_slides_content_slide_info_text) {
+  font-family: "Bebas Neue", cursive;
+  font-size: 1.4em;
+}
+.bh_slides_content_slide_info h1 {
+  font-size: 2.6em;
+  margin-bottom: 20px;
+}
+.bh_slides_content_slide_info_text {
+  font-size: 1.2em;
+  line-height: 1.6em;
+}
+.bh_slides_content_slide_image {
+  flex-basis: 50%;
+}
+.bh_slides_content_nav {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  position: absolute;
+  top: unset;
+  left: 60px;
+  bottom: 60px;
+}
+.bh_slides_content_nav span {
+  width: 20px;
+  height: 20px;
+  display: block;
+  background-color: #CCC;
+  cursor: pointer;
+  border-radius: 50%;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+}
+.bh_slides_content_nav span.active {
+  background-color: #FFC045;
+}

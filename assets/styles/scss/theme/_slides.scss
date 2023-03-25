@@ -1,0 +1,66 @@
+@include theme() {
+    &_slides {
+        @include fullWidth;
+        margin: 80px 0;
+
+        &_content {
+            @include containerWidth;
+
+            padding: 30px;
+            background-color: $color-white;
+            box-shadow: 10px 10px 50px $color-black-shadow;
+
+            @include relative;
+
+            &_slide {
+                @include flex(center, flex-start);
+
+                &_info {
+                    @include flex2;
+                    padding: 30px;
+
+                    p:not(&_text) {
+                        font-family: $font-bebas-neue;
+                        font-size: 1.4em;
+                    }
+
+                    h1 {
+                        font-size: 2.6em;
+                        margin-bottom: 20px;
+                    }
+
+                    &_text {
+                        font-size: 1.2em;
+                        line-height: 1.6em;
+                    }
+                }
+
+                &_image {
+                    @include flex2;
+                }
+            }
+
+            &_nav {
+                @include flex(flex-start);
+                gap: 10px;
+
+                @include absolute(unset, 60px);
+                bottom: 60px;
+
+                span {
+                    width: 20px;
+                    height: 20px;
+                    display: block;
+                    background-color: #CCC;
+                    cursor: pointer;
+
+                    @include rounded;
+
+                    &.active {
+                        background-color: $color-xanthous;
+                    }
+                }
+            }
+        }
+    }
+}
