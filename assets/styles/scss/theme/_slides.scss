@@ -38,6 +38,15 @@
 
                 &_image {
                     @include flex2;
+                    overflow: hidden;
+
+                    &:hover img {                        
+                        transform: scale(1.2);
+                    }
+
+                    img {
+                        @include transition;
+                    }
                 }
             }
 
