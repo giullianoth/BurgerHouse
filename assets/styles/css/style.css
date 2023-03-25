@@ -356,9 +356,10 @@ body img {
   flex-basis: 50%;
   padding: 30px;
 }
-p:not(.bh_slides_content_slide_info_text) {
+.bh_slides_content_slide_info .subtitle {
   font-family: "Bebas Neue", cursive;
   font-size: 1.4em;
+  color: #3D2514;
 }
 .bh_slides_content_slide_info h1 {
   font-size: 2.6em;
@@ -394,4 +395,100 @@ p:not(.bh_slides_content_slide_info_text) {
 }
 .bh_slides_content_nav span.active {
   background-color: #FFC045;
+}
+
+.bh_reservation {
+  width: 100%;
+  position: relative;
+  margin-top: 180px;
+}
+.bh_reservation_images {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform: translateY(-50%);
+  z-index: -1;
+  height: 160%;
+  overflow: hidden;
+}
+.bh_reservation_images img {
+  width: auto;
+}
+.bh_reservation_images img.burger {
+  height: 300px;
+  position: absolute;
+  top: 0;
+  left: -40px;
+}
+.bh_reservation_images img.sauce {
+  height: 300px;
+  position: absolute;
+  top: 30%;
+  left: 20%;
+}
+.bh_reservation_images img.lunch {
+  height: 450px;
+  position: absolute;
+  top: unset;
+  left: unset;
+  right: -100px;
+  bottom: 0;
+}
+.bh_reservation_content {
+  max-width: 1328px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+.bh_reservation_content_title {
+  text-align: center;
+  margin-bottom: 60px;
+}
+.bh_reservation_content_title p {
+  font-family: "Bebas Neue", cursive;
+  font-size: 1.4em;
+  color: #3D2514;
+}
+.bh_reservation_content_form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 30px;
+  max-width: 780px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+.bh_reservation_content_form input {
+  display: block;
+  flex-basis: calc(50% - 30px);
+  padding: 16px;
+  font-family: "Bebas Neue", cursive;
+  font-size: 1em;
+  outline: none;
+  border: 1px solid #999;
+  border-radius: 4px;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+}
+.bh_reservation_content_form button {
+  display: block;
+  flex-basis: calc(50% - 30px);
+  padding: 16px;
+  border: 1px solid transparent;
+  background-color: #BF2222;
+  color: #FFF;
+  font-family: "Alfa Slab One", cursive;
+  font-size: 1em;
+  border-radius: 4px;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  transition: all 0.3s ease 0s;
+  cursor: pointer;
+}
+.bh_reservation_content_form button:hover {
+  background-color: transparent;
+  color: #BF2222;
+  border-color: #BF2222;
 }

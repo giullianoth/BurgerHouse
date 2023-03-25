@@ -19,9 +19,10 @@
                     @include flex2;
                     padding: 30px;
 
-                    p:not(&_text) {
+                    .subtitle {
                         font-family: $font-bebas-neue;
                         font-size: 1.4em;
+                        color: $color-bistre;
                     }
 
                     h1 {

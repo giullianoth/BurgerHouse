@@ -1,0 +1,92 @@
+@include theme() {
+    &_reservation {
+        @include fullWidth;
+        @include relative;
+        margin-top: 180px;
+
+        &_images {
+            @include absoluteFull(50%);
+            transform: translateY(-50%);
+            z-index: -1;
+            height: 160%;
+            overflow: hidden;
+
+            img {
+                width: auto;
+
+                &.burger {
+                    height: 300px;
+                    @include absolute(0, -40px);
+                }
+    
+                &.sauce {
+                    height: 300px;
+                    @include absolute(30%, 20%);
+                }
+    
+                &.lunch {
+                    height: 450px;
+                    @include absolute(unset, unset);
+                    right: -100px;
+                    bottom: 0;
+                }
+            }
+        }
+
+        &_content {
+            @include containerWidth;
+
+            &_title {
+                text-align: center;
+                margin-bottom: 60px;
+
+                p {
+                    font-family: $font-bebas-neue;
+                    font-size: 1.4em;
+                    color: $color-bistre;
+                }
+            }
+
+            &_form {
+                @include flex;
+                gap: 30px;
+                @include containerWidth(780px);
+
+                input {
+                    display: block;
+                    @include flex2(30px);
+                    padding: 16px;
+                    font-family: $font-bebas-neue;
+                    font-size: 1em;
+
+                    outline: none;
+                    border: 1px solid #999;
+
+                    @include borderRadius(4px);
+                }
+
+                button {
+                    display: block;
+                    @include flex2(30px);
+                    padding: 16px;
+                    border: 1px solid transparent;
+                    background-color: $color-fire-brick;
+                    color: $color-white;
+                    font-family: $font-alfa-slab-one;
+                    font-size: 1em;
+
+                    @include borderRadius(4px);
+                    @include transition;
+
+                    cursor: pointer;
+
+                    &:hover {
+                        background-color: transparent;
+                        color: $color-fire-brick;
+                        border-color: $color-fire-brick;
+                    }
+                }
+            }
+        }
+    }
+}
