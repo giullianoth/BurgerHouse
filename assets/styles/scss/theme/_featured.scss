@@ -3,20 +3,33 @@
         @include fullWidth;
 
         &_content {
-            @include containerWidth;
+            @include containerWidth($breakpoint-mobile-landscape, 20px, 40px);
             @include flex;
-            gap: 40px;
+            gap: 20px;            
 
-            padding: 80px 40px;
+            @include setResponsiveDesign($breakpoint-desktop-sd) {
+                @include containerWidth;
+                padding: 40px 80px;
+                gap: 40px;
+            }
 
             &_main {
-                @include flex2(40px);
+                @include flex1;
+
+                @include setResponsiveDesign($breakpoint-desktop-sd) {
+                    @include flex2(40px);
+                }
             }
 
             &_secondaries {
-                @include flex2(40px);
+                @include flex1;
                 @include flex;
-                gap: 40px;
+                gap: 20px;
+
+                @include setResponsiveDesign($breakpoint-desktop-sd) {
+                    @include flex2(40px);
+                    gap: 40px;
+                }
 
                 &_secondary {
                     @include flex1;
@@ -41,20 +54,30 @@
 
                 &_title {
                     @include absolute;
-                    padding: 30px;
+                    padding: 10px;
                     color: $color-white;
                     font-family: $font-bebas-neue;
 
+                    @include setResponsiveDesign($breakpoint-desktop-sd) {
+                        padding: 30px;
+                    }
+
                     p {
-                        font-size: 1.4em;
+                        @include setResponsiveDesign($breakpoint-mobile) {
+                            font-size: 1.4em;
+                        }
                     }
 
                     h1 {
                         font-family: inherit;
                         color: inherit;
-                        font-size: 2.8em;
+                        font-size: 2em;
                         font-weight: normal;
                         line-height: 0.8em;
+
+                        @include setResponsiveDesign($breakpoint-mobile) {
+                            font-size: 2.8em;
+                        }
 
                         span {
                             display: block;
