@@ -1,12 +1,16 @@
 @include theme() {
     &_headline {
         @include fullWidth;
-        height: 900px;
+        height: 800px;
 
         @include backgroundImage("../../images/background_headline.png");
         @include flex;
 
         overflow: hidden;
+
+        @include setResponsiveDesign($breakpoint-mobile) {
+            height: 900px;
+        }
 
         @include setResponsiveDesign($breakpoint-tablet-landscape) {
             align-items: center;
