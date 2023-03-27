@@ -506,7 +506,7 @@ body img {
 }
 .bh_footer_content {
   margin: 40px;
-  background-color: black;
+  background-color: #000;
   position: relative;
 }
 .bh_footer_content .background {
@@ -533,18 +533,92 @@ body img {
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
+  gap: 140px;
   padding: 40px;
 }
 .bh_footer_content_row1 {
   flex-basis: 100%;
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-end;
   flex-wrap: wrap;
+  margin-top: 40px;
 }
 .bh_footer_content_row1_info {
-  width: 50%;
+  width: 40%;
+}
+.bh_footer_content_row1_info_title {
+  margin-bottom: 40px;
 }
 .bh_footer_content_row1_info_title img {
   width: 410px;
+}
+.bh_footer_content_row1_info_text {
+  line-height: 1.6em;
+}
+.bh_footer_content_row1_address {
+  width: 30%;
+  font-family: "Bebas Neue", cursive;
+  font-size: 1.4em;
+}
+.bh_footer_content_row1_address p {
+  line-height: 1.8em;
+}
+.bh_footer_content_row1_address p i {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  display: inline-flex;
+  margin-right: 20px;
+  width: 20px;
+  font-size: 1.2em;
+}
+.bh_footer_content_row2 {
+  flex-basis: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.bh_footer_content_row2_copy {
+  font-size: 1em;
+  font-family: "Bebas Neue", cursive;
+}
+.bh_footer_content_row2_social ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.bh_footer_content_row2_social ul li {
+  font-size: 1.2em;
+  color: #000;
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  background-color: #FFF;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  border-radius: 50%;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+}
+.bh_footer_content_row2_social ul li a {
+  color: #000;
+}
+.bh_footer_attribution {
+  text-align: center;
+  margin-bottom: 20px;
+  font-family: "Bebas Neue", cursive;
+  font-size: 0.8em;
+}
+.bh_footer_attribution a {
+  color: #BF2222;
+}
+.bh_footer_attribution a:hover {
+  text-decoration: underline;
 }

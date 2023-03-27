@@ -5,7 +5,7 @@
 
         &_content {
             margin: 40px;
-            background-color: black;
+            background-color: $color-black;
             @include relative;
 
             .background {
@@ -21,25 +21,96 @@
                 z-index: 2;
                 color: $color-white;
                 @include flex;
+                gap: 140px;
                 padding: 40px;
             }
 
             &_row1 {
                 @include flex1;
-                @include flex(space-between);
+                @include flex(space-between, flex-end);
+                margin-top: 40px;
 
                 &_info {
-                    width: 50%;
+                    width: 40%;
 
                     &_title {
+                        margin-bottom: 40px;
+
                         img {
                             width: 410px;
                         }
                     }
+
+                    &_text {
+                        line-height: 1.6em;
+                    }
                 }
 
                 &_address {
-                    
+                    width: 30%;
+                    font-family: $font-bebas-neue;
+                    font-size: 1.4em;
+
+                    p {
+                        line-height: 1.8em;
+
+                        i {
+                            @include flex;
+                            display: inline-flex;
+                            margin-right: 20px;
+                            width: 20px;
+                            font-size: 1.2em;
+                        }
+                    }
+                }
+            }
+
+            &_row2 {
+                @include flex1;
+                @include flex(space-between);
+
+                &_copy {
+                    font-size: 1em;
+                    font-family: $font-bebas-neue;
+                }
+
+                &_social {
+                    ul {
+                        @include flex;
+                        gap: 20px;
+
+                        li {
+                            font-size: 1.2em;
+                            color: $color-black;
+                            display: inline-block;
+                            width: 30px;
+                            height: 30px;
+                            
+                            background-color: $color-white;
+
+                            @include flex;
+                            @include rounded;
+
+                            a {
+                                color: $color-black;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        &_attribution {
+            text-align: center;
+            margin-bottom: 20px;
+            font-family: $font-bebas-neue;
+            font-size: 0.8em;
+
+            a {
+                color: $color-fire-brick;
+
+                &:hover {
+                    text-decoration: underline;
                 }
             }
         }
