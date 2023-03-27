@@ -14,10 +14,26 @@
 
             &_slide {
                 @include flex(center, flex-start);
+                flex-direction: column-reverse;
+
+                @include containerWidth($breakpoint-mobile-landscape, 0, 0);
+
+                @include setResponsiveDesign($breakpoint-desktop-sd) {
+                    max-width: 100%;
+                    flex-direction: row;
+                }
 
                 &_info {
-                    @include flex2;
-                    padding: 30px;
+                    @include flex1;
+                    padding: 30px 0;
+
+                    @include setResponsiveDesign($breakpoint-mobile) {
+                        padding: 30px;
+                    }
+
+                    @include setResponsiveDesign($breakpoint-tablet-landscape) {
+                        @include flex2;
+                    }
 
                     .subtitle {
                         font-family: $font-bebas-neue;
@@ -31,14 +47,18 @@
                     }
 
                     &_text {
-                        font-size: 1.2em;
+                        font-size: 1em;
                         line-height: 1.6em;
                     }
                 }
 
                 &_image {
-                    @include flex2;
+                    @include flex1;
                     overflow: hidden;
+
+                    @include setResponsiveDesign($breakpoint-tablet-landscape) {
+                        @include flex2;
+                    }
 
                     &:hover img {                        
                         transform: scale(1.2);
@@ -54,8 +74,8 @@
                 @include flex(flex-start);
                 gap: 10px;
 
-                @include absolute(unset, 60px);
-                bottom: 60px;
+                @include absolute(unset, 30px);
+                bottom: 30px;
 
                 span {
                     width: 20px;
