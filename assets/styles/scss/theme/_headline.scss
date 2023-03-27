@@ -12,6 +12,10 @@
             align-items: center;
         }
 
+        @include setResponsiveDesign($breakpoint-desktop-hd1) {
+            height: 1200px;
+        }
+
         &_content {
             @include containerWidth;
             @include flex;
@@ -25,6 +29,10 @@
 
             @include setResponsiveDesign($breakpoint-mobile) {
                 padding-top: 180px;
+            }
+
+            @include setResponsiveDesign($breakpoint-tablet-landscape) {
+                padding-top: 0;
             }
 
             &_headline {

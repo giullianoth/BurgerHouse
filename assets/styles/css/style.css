@@ -218,6 +218,11 @@ body img {
     align-items: center;
   }
 }
+@media screen and (min-width: 1365px) {
+  .bh_headline {
+    height: 1200px;
+  }
+}
 .bh_headline_content {
   max-width: 1328px;
   margin: 0 auto;
@@ -237,6 +242,11 @@ body img {
 @media screen and (min-width: 479px) {
   .bh_headline_content {
     padding-top: 180px;
+  }
+}
+@media screen and (min-width: 899px) {
+  .bh_headline_content {
+    padding-top: 0;
   }
 }
 .bh_headline_content_headline {
