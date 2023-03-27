@@ -102,3 +102,12 @@
 @mixin transition($property: all, $duration: 0.3s, $timingFunction: ease, $delay: 0s) {
     transition: $property $duration $timingFunction $delay;
 }
+
+// RESPONSIVE DESIGN
+@mixin setResponsiveDesign($screenWidth) {
+    $width: calc($screenWidth - 1px);
+
+    @media screen and (min-width: $width) {
+        @content;
+    }
+}

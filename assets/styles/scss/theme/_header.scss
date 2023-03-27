@@ -8,7 +8,16 @@
 
         &_content {
             @include containerWidth;
-            @include flex;
+            @include flex(center, center, nowrap);
+            @include relative;
+
+            @include setResponsiveDesign($breakpoint-mobile-landscape) {
+                margin-top: 40px;
+            }
+
+            @include setResponsiveDesign($breakpoint-tablet-landscape) {
+                margin-top: 0;
+            }
 
             &_logo {
                 @include flex2;
@@ -18,7 +27,11 @@
                 }
 
                 img {
-                    width: 260px;
+                    width: 160px;
+
+                    @include setResponsiveDesign($breakpoint-mobile-landscape) {
+                        width: 260px;
+                    }
                 }
             }
 
@@ -28,38 +41,112 @@
                 gap: 30px;
 
                 &_contact {
-                    @include flex1;
+                    @include absolute(-100%);
+                    @include fullWidth;
+
+                    @include setResponsiveDesign($breakpoint-tablet-landscape) {
+                        position: static;
+                        @include flex1;
+                    }
 
                     p {                        
-                        @include flex(flex-end);
+                        @include flex;
                         font-weight: 700;
+                        font-size: 0.8em;
                         color: $color-bistre;
+
+                        @include setResponsiveDesign($breakpoint-mobile-landscape) {
+                            font-size: 1em;
+                        }
+
+                        @include setResponsiveDesign($breakpoint-tablet-landscape) {
+                            justify-content: flex-end;
+                        }
                     }
 
                     img {
                         display: inline-block;
-                        width: 40px;
+                        width: 30px;
                         margin-right: 20px;
+
+                        @include setResponsiveDesign($breakpoint-mobile-landscape) {
+                            width: 40px;
+                        }
                     }
                 }
 
                 &_menu {
                     @include flex1;
+                    text-align: right;
+
+                    &_icon {
+                        font-size: 1.6em;
+                        cursor: pointer;
+                        color: $color-bistre;
+
+                        @include setResponsiveDesign($breakpoint-tablet-landscape) {
+                            display: none;
+                        }
+                    }
 
                     ul {
+                        @include absolute(calc(100% + 20px), unset);
+                        right: 0;
+                        @include containerWidth($breakpoint-mobile, 0, 0);
+                        margin: 0 20px;
+
                         @include flex(flex-end);
-                        column-gap: 60px;
+                        gap: 10px;
                         font-family: $font-bebas-neue;
-                        font-size: 1.4em;
+                        font-size: 2em;
 
-                        a {
-                            color: $color-bistre;
-                            letter-spacing: 0.2em;
+                        background-color: $color-xanthous;
+                        box-shadow: 1px 1px 10px $color-black-shadow;
+                        padding: 20px;
 
-                            @include transition;
+                        display: none;
 
-                            &:hover {
-                                color: $color-fire-brick;
+                        @include setResponsiveDesign($breakpoint-tablet-landscape) {
+                            display: flex;
+                            background: none;
+                            box-shadow: none;
+                            position: static;
+                            font-size: 1.4em;
+                            gap: 20px;
+                            max-width: 100%;
+                            margin: 0;
+                            padding: 0;
+                            @include flex1;
+                        }
+
+                        @include setResponsiveDesign($breakpoint-desktop-sd) {
+                            gap: 60px;
+                        }
+
+                        &.active {
+                            display: flex;
+                        }
+
+                        li {
+                            @include flex1;
+                            text-align: center;
+
+                            @include setResponsiveDesign($breakpoint-tablet-landscape) {
+                                @include flexBasis(unset);
+                            }
+
+                            a {
+                                color: $color-bistre;
+    
+                                @include transition;
+                                
+                                @include setResponsiveDesign($breakpoint-desktop-hd1) {
+                                    letter-spacing: 0.2em;
+                                }
+    
+                                &:hover {
+                                    color: $color-fire-brick;
+                                }
                             }
                         }
                     }
