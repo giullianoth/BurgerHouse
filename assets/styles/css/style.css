@@ -209,7 +209,7 @@ body img {
   background-position: center center;
   display: flex;
   justify-content: center;
-  align-items: flex-end;
+  align-items: center;
   flex-wrap: wrap;
   overflow: hidden;
 }
@@ -232,6 +232,11 @@ body img {
 @media screen and (min-width: 374px) {
   .bh_headline_content {
     gap: 0;
+  }
+}
+@media screen and (min-width: 479px) {
+  .bh_headline_content {
+    padding-top: 180px;
   }
 }
 .bh_headline_content_headline {
