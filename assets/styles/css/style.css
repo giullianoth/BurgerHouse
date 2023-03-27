@@ -17,7 +17,17 @@ body h1, body h2, body h3, body h4, body h5, body h6 {
   text-transform: uppercase;
 }
 body h1 {
-  font-size: 3.4em;
+  font-size: 1.6em;
+}
+@media screen and (min-width: 767px) {
+  body h1 {
+    font-size: 2.4em;
+  }
+}
+@media screen and (min-width: 1365px) {
+  body h1 {
+    font-size: 3.4em;
+  }
 }
 body a {
   text-decoration: none;
@@ -202,7 +212,7 @@ body img {
 
 .bh_headline {
   width: 100%;
-  height: 800px;
+  height: 900px;
   background-image: url("../../images/background_headline.png");
   background-repeat: no-repeat;
   background-size: cover;
@@ -212,11 +222,6 @@ body img {
   align-items: center;
   flex-wrap: wrap;
   overflow: hidden;
-}
-@media screen and (min-width: 479px) {
-  .bh_headline {
-    height: 900px;
-  }
 }
 @media screen and (min-width: 899px) {
   .bh_headline {
@@ -280,17 +285,6 @@ body img {
 .bh_headline_content_headline_title h1 {
   line-height: 1.6em;
   text-shadow: 3px 3px 0 #FFF;
-  font-size: 1.6em;
-}
-@media screen and (min-width: 767px) {
-  .bh_headline_content_headline_title h1 {
-    font-size: 2.4em;
-  }
-}
-@media screen and (min-width: 1365px) {
-  .bh_headline_content_headline_title h1 {
-    font-size: 3.4em;
-  }
 }
 .bh_headline_content_headline_title h1 span {
   display: block;
@@ -510,6 +504,9 @@ body img {
 }
 .bh_menu_content_info {
   text-align: center;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 0;
   margin-bottom: 60px;
 }
 .bh_menu_content_menu {
@@ -517,23 +514,46 @@ body img {
   justify-content: center;
   align-items: flex-end;
   flex-wrap: wrap;
+  gap: 60px;
+  max-width: 480px;
+  margin: 0 auto;
+  padding: 0 0;
+}
+@media screen and (min-width: 899px) {
+  .bh_menu_content_menu {
+    gap: 20px;
+    max-width: 100%;
+  }
 }
 .bh_menu_content_menu_item {
-  flex-basis: 33.3333333333%;
+  flex-basis: 100%;
+}
+@media screen and (min-width: 899px) {
+  .bh_menu_content_menu_item {
+    flex-basis: calc(33.3333333333% - 20px);
+  }
 }
 .bh_menu_content_menu_item_title {
-  padding: 0 30px;
   text-align: center;
   margin-bottom: 20px;
+}
+@media screen and (min-width: 479px) {
+  .bh_menu_content_menu_item_title {
+    padding: 0 30px;
+  }
 }
 .bh_menu_content_menu_item_title h2 {
   font-family: "Bebas Neue", cursive;
   font-size: 1.6em;
 }
 .bh_menu_content_menu_item_desc {
-  padding: 0 30px;
   text-align: center;
   margin-bottom: 30px;
+}
+@media screen and (min-width: 479px) {
+  .bh_menu_content_menu_item_desc {
+    padding: 0 30px;
+  }
 }
 .bh_menu_content_menu_item_action {
   text-align: center;

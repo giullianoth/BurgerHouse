@@ -25,19 +25,35 @@
 
             &_info {
                 text-align: center;
+                @include containerWidth(900px, 0, 0);
                 margin-bottom: 60px;
             }
 
             &_menu {
                 @include flex(center, flex-end);
+                gap: 60px;
+
+                @include containerWidth($breakpoint-mobile, 0, 0);
+
+                @include setResponsiveDesign($breakpoint-tablet-landscape) {
+                    gap: 20px;
+                    max-width: 100%;
+                }
 
                 &_item {
-                    @include flex3;
+                    @include flex1;
+
+                    @include setResponsiveDesign($breakpoint-tablet-landscape) {
+                        @include flex3(20px);
+                    }
 
                     &_title {
-                        padding: 0 30px;
                         text-align: center;
                         margin-bottom: 20px;
+
+                        @include setResponsiveDesign($breakpoint-mobile) {
+                            padding: 0 30px;
+                        }
 
                         h2 {
                             font-family: $font-bebas-neue;
@@ -46,9 +62,12 @@
                     }
 
                     &_desc {
-                        padding: 0 30px;
                         text-align: center;
                         margin-bottom: 30px;
+
+                        @include setResponsiveDesign($breakpoint-mobile) {
+                            padding: 0 30px;
+                        }
                     }
 
                     &_action {

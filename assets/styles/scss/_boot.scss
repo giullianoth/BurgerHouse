@@ -16,7 +16,15 @@ body {
     }
 
     h1 {
-        font-size: 3.4em;
+        font-size: 1.6em;        
+
+        @include setResponsiveDesign($breakpoint-tablet) {
+            font-size: 2.4em;
+        }
+
+        @include setResponsiveDesign($breakpoint-desktop-hd1) {
+            font-size: 3.4em;
+        }
     }
 
     a {

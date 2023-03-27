@@ -1,16 +1,12 @@
 @include theme() {
     &_headline {
         @include fullWidth;
-        height: 800px;
+        height: 900px;
 
         @include backgroundImage("../../images/background_headline.png");
         @include flex;
 
         overflow: hidden;
-
-        @include setResponsiveDesign($breakpoint-mobile) {
-            height: 900px;
-        }
 
         @include setResponsiveDesign($breakpoint-tablet-landscape) {
             align-items: center;
@@ -67,15 +63,6 @@
                     h1 {
                         line-height: 1.6em;
                         text-shadow: 3px 3px 0 $color-white;
-                        font-size: 1.6em;
-
-                        @include setResponsiveDesign($breakpoint-tablet) {
-                            font-size: 2.4em;
-                        }
-
-                        @include setResponsiveDesign($breakpoint-desktop-hd1) {
-                            font-size: 3.4em;
-                        }
 
                         span {
                             display: block;
