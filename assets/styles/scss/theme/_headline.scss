@@ -8,16 +8,29 @@
 
         overflow: hidden;
 
+        @include setResponsiveDesign($breakpoint-tablet-landscape) {
+            align-items: center;
+        }
+
         &_content {
             @include containerWidth;
             @include flex;
-            gap: 80px;
+            gap: 120px;
 
-            padding-bottom: 80px;
+            padding-bottom: 60px;
+
+            @include setResponsiveDesign(375px) {
+                gap: 0;
+            }
 
             &_headline {
                 @include flex1;
                 text-align: center;
+
+                @include setResponsiveDesign($breakpoint-tablet-landscape) {
+                    @include flex2;
+                    text-align: left;
+                }
 
                 &_slogan {
                     border: 2px dashed $color-bistre;
@@ -28,6 +41,10 @@
                     color: $color-bistre;
 
                     margin-bottom: 40px;
+
+                    @include setResponsiveDesign($breakpoint-desktop-hd1) {
+                        font-size: 1.4em;
+                    }
                 }
 
                 &_title {
@@ -35,6 +52,14 @@
                         line-height: 1.6em;
                         text-shadow: 3px 3px 0 $color-white;
                         font-size: 1.6em;
+
+                        @include setResponsiveDesign($breakpoint-tablet) {
+                            font-size: 2.4em;
+                        }
+
+                        @include setResponsiveDesign($breakpoint-desktop-hd1) {
+                            font-size: 3.4em;
+                        }
 
                         span {
                             display: block;
@@ -46,17 +71,30 @@
 
             &_image {
                 @include flex1;
+                @include relative;
+                @include containerWidth($breakpoint-mobile, 0, 0);
+
+                @include setResponsiveDesign($breakpoint-tablet-landscape) {
+                    @include flex2;
+                    max-width: 100%;
+                }
 
                 &_img {
-                    @include containerWidth($breakpoint-mobile, 0, 0);
-
                     img {
-                        transform: scale(1.4);
+                        transform: translateY(-80px) scale(1.4);
+
+                        @include setResponsiveDesign(375px) {
+                            transform: translateY(0) scale(1);
+                        }
+
+                        @include setResponsiveDesign($breakpoint-desktop-hd1) {
+                            transform: scale(1.3);
+                        }
                     }
                 }
 
                 &_price {
-                    @include absolute(unset, 0);
+                    @include absolute(unset);
                     bottom: 0;
                     width: 124px;
                     height: 124px;
@@ -67,8 +105,14 @@
                     font-size: 1.8em;
 
                     @include rounded;
-
                     @include flex;
+
+                    @include setResponsiveDesign($breakpoint-desktop-hd1) {
+                        width: 174px;
+                        height: 174px;
+                        bottom: -12%;
+                        left: -8%;
+                    }
 
                     &::before {
                         content: "";
@@ -90,6 +134,10 @@
 
                         .font1 {
                             font-size: 1.6em;
+
+                            @include setResponsiveDesign($breakpoint-desktop-hd1) {
+                                font-size: 2.6em;
+                            }
                         }
     
                         .font2 {
@@ -100,6 +148,11 @@
                             text-align: center;
                             letter-spacing: 0.2em;
                             padding-left: 0.2em;
+
+                            @include setResponsiveDesign($breakpoint-desktop-hd1) {
+                                letter-spacing: 0.6em;
+                                padding-left: 0.6em;
+                            }
                         }
                     }
                 }
