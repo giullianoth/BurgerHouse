@@ -15,20 +15,35 @@
                 width: auto;
 
                 &.burger {
-                    height: 300px;
-                    @include absolute(0, -40px);
+                    height: 100px;
+                    @include absolute(80px, -40px);
+
+                    @include setResponsiveDesign($breakpoint-desktop-sd) {
+                        height: 300px;
+                        top: 0;
+                    }
                 }
     
                 &.sauce {
-                    height: 300px;
-                    @include absolute(30%, 20%);
+                    height: 200px;
+                    @include absolute(30%, 10px);
+
+                    @include setResponsiveDesign($breakpoint-desktop-sd) {
+                        height: 300px;
+                        left: 20%;
+                    }
                 }
     
                 &.lunch {
-                    height: 450px;
+                    height: 200px;
                     @include absolute(unset, unset);
-                    right: -100px;
+                    right: -40px;
                     bottom: 0;
+
+                    @include setResponsiveDesign($breakpoint-desktop-sd) {
+                        height: 450px;
+                        right: -100px;
+                    }
                 }
             }
         }
@@ -50,11 +65,15 @@
             &_form {
                 @include flex;
                 gap: 30px;
-                @include containerWidth(780px);
+                @include containerWidth($breakpoint-mobile, 0, 0);
+
+                @include setResponsiveDesign($breakpoint-desktop-sd) {
+                    @include containerWidth(780px, 0, 0);
+                }
 
                 input {
                     display: block;
-                    @include flex2(30px);
+                    @include flex1;
                     padding: 16px;
                     font-family: $font-bebas-neue;
                     font-size: 1em;
@@ -63,11 +82,15 @@
                     border: 1px solid #999;
 
                     @include borderRadius(4px);
+
+                    @include setResponsiveDesign($breakpoint-desktop-sd) {
+                        @include flex2(30px);
+                    }
                 }
 
                 button {
                     display: block;
-                    @include flex2(30px);
+                    @include flex1;
                     padding: 16px;
                     border: 1px solid transparent;
                     background-color: $color-fire-brick;
@@ -79,6 +102,10 @@
                     @include transition;
 
                     cursor: pointer;
+
+                    @include setResponsiveDesign($breakpoint-desktop-sd) {
+                        @include flex2(30px);
+                    }
 
                     &:hover {
                         background-color: transparent;

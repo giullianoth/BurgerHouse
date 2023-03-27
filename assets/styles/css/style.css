@@ -657,6 +657,12 @@ body img {
   left: 30px;
   bottom: 30px;
 }
+@media screen and (min-width: 1365px) {
+  .bh_slides_content_nav {
+    left: 60px;
+    bottom: 60px;
+  }
+}
 .bh_slides_content_nav span {
   width: 20px;
   height: 20px;
@@ -691,24 +697,42 @@ body img {
   width: auto;
 }
 .bh_reservation_images img.burger {
-  height: 300px;
+  height: 100px;
   position: absolute;
-  top: 0;
+  top: 80px;
   left: -40px;
 }
+@media screen and (min-width: 1023px) {
+  .bh_reservation_images img.burger {
+    height: 300px;
+    top: 0;
+  }
+}
 .bh_reservation_images img.sauce {
-  height: 300px;
+  height: 200px;
   position: absolute;
   top: 30%;
-  left: 20%;
+  left: 10px;
+}
+@media screen and (min-width: 1023px) {
+  .bh_reservation_images img.sauce {
+    height: 300px;
+    left: 20%;
+  }
 }
 .bh_reservation_images img.lunch {
-  height: 450px;
+  height: 200px;
   position: absolute;
   top: unset;
   left: unset;
-  right: -100px;
+  right: -40px;
   bottom: 0;
+}
+@media screen and (min-width: 1023px) {
+  .bh_reservation_images img.lunch {
+    height: 450px;
+    right: -100px;
+  }
 }
 .bh_reservation_content {
   max-width: 1328px;
@@ -730,13 +754,20 @@ body img {
   align-items: center;
   flex-wrap: wrap;
   gap: 30px;
-  max-width: 780px;
+  max-width: 480px;
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 0 0;
+}
+@media screen and (min-width: 1023px) {
+  .bh_reservation_content_form {
+    max-width: 780px;
+    margin: 0 auto;
+    padding: 0 0;
+  }
 }
 .bh_reservation_content_form input {
   display: block;
-  flex-basis: calc(50% - 30px);
+  flex-basis: 100%;
   padding: 16px;
   font-family: "Bebas Neue", cursive;
   font-size: 1em;
@@ -746,9 +777,14 @@ body img {
   -moz-border-radius: 4px;
   -webkit-border-radius: 4px;
 }
+@media screen and (min-width: 1023px) {
+  .bh_reservation_content_form input {
+    flex-basis: calc(50% - 30px);
+  }
+}
 .bh_reservation_content_form button {
   display: block;
-  flex-basis: calc(50% - 30px);
+  flex-basis: 100%;
   padding: 16px;
   border: 1px solid transparent;
   background-color: #BF2222;
@@ -760,6 +796,11 @@ body img {
   -webkit-border-radius: 4px;
   transition: all 0.3s ease 0s;
   cursor: pointer;
+}
+@media screen and (min-width: 1023px) {
+  .bh_reservation_content_form button {
+    flex-basis: calc(50% - 30px);
+  }
 }
 .bh_reservation_content_form button:hover {
   background-color: transparent;

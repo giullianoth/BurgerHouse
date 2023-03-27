@@ -76,6 +76,11 @@
 
                 @include absolute(unset, 30px);
                 bottom: 30px;
+                
+                @include setResponsiveDesign($breakpoint-desktop-hd1) {
+                    left: 60px;
+                    bottom: 60px;
+                }
 
                 span {
                     width: 20px;
