@@ -1,24 +1,29 @@
 @include theme() {
     &_headline {
         @include fullWidth;
-        height: 100vh;
+        height: 900px;
 
         @include backgroundImage("../../images/background_headline.png");
+        @include flex(center, flex-end);
+
+        overflow: hidden;
 
         &_content {
             @include containerWidth;
             @include flex;
-            height: 100%;
+            gap: 80px;
+
+            padding-bottom: 80px;
 
             &_headline {
-                @include flex2;
+                @include flex1;
+                text-align: center;
 
                 &_slogan {
                     border: 2px dashed $color-bistre;
                     display: inline-block;
                     padding: 8px 14px;
 
-                    font-size: 1.4em;
                     font-family: $font-bebas-neue;
                     color: $color-bistre;
 
@@ -29,6 +34,7 @@
                     h1 {
                         line-height: 1.6em;
                         text-shadow: 3px 3px 0 $color-white;
+                        font-size: 1.6em;
 
                         span {
                             display: block;
@@ -39,21 +45,21 @@
             }
 
             &_image {
-                @include flex2;
-                @include relative;
-                height: 100%;
+                @include flex1;
 
                 &_img {
-                    @include absolute(50%, 50%);
-                    transform: translate(-50%, -50%);
-                    width: 130%;
+                    @include containerWidth($breakpoint-mobile, 0, 0);
+
+                    img {
+                        transform: scale(1.4);
+                    }
                 }
 
                 &_price {
-                    @include absolute(unset, -40px);
-                    bottom: 10%;
-                    width: 174px;
-                    height: 174px;
+                    @include absolute(unset, 0);
+                    bottom: 0;
+                    width: 124px;
+                    height: 124px;
                     background-color: $color-fire-brick;
 
                     color: $color-white;
@@ -83,7 +89,7 @@
                         }
 
                         .font1 {
-                            font-size: 2.6em;
+                            font-size: 1.6em;
                         }
     
                         .font2 {
@@ -92,8 +98,8 @@
     
                         .font3 {
                             text-align: center;
-                            letter-spacing: 0.5em;
-                            padding-left: 0.5em;
+                            letter-spacing: 0.2em;
+                            padding-left: 0.2em;
                         }
                     }
                 }
