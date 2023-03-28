@@ -726,7 +726,7 @@ body img {
   top: unset;
   left: unset;
   right: -40px;
-  bottom: 0;
+  bottom: 5%;
 }
 @media screen and (min-width: 1023px) {
   .bh_reservation_images img.lunch {
@@ -813,7 +813,6 @@ body img {
   margin-top: 120px;
 }
 .bh_footer_content {
-  margin: 40px;
   background-color: #000;
   position: relative;
 }
@@ -847,27 +846,52 @@ body img {
 .bh_footer_content_row1 {
   flex-basis: 100%;
   display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
+  justify-content: center;
+  align-items: center;
   flex-wrap: wrap;
+  gap: 40px;
   margin-top: 40px;
 }
+@media screen and (min-width: 899px) {
+  .bh_footer_content_row1 {
+    justify-content: space-between;
+  }
+}
 .bh_footer_content_row1_info {
-  width: 40%;
+  flex-basis: 100%;
+}
+@media screen and (min-width: 899px) {
+  .bh_footer_content_row1_info {
+    flex-basis: unset;
+    width: 40%;
+  }
 }
 .bh_footer_content_row1_info_title {
   margin-bottom: 40px;
 }
-.bh_footer_content_row1_info_title img {
-  width: 410px;
+@media screen and (min-width: 479px) {
+  .bh_footer_content_row1_info_title img {
+    width: 410px;
+  }
 }
 .bh_footer_content_row1_info_text {
   line-height: 1.6em;
 }
 .bh_footer_content_row1_address {
-  width: 30%;
+  flex-basis: 100%;
   font-family: "Bebas Neue", cursive;
-  font-size: 1.4em;
+}
+@media screen and (min-width: 899px) {
+  .bh_footer_content_row1_address {
+    flex-basis: unset;
+    width: 40%;
+    font-size: 1.4em;
+  }
+}
+@media screen and (min-width: 1023px) {
+  .bh_footer_content_row1_address {
+    width: 30%;
+  }
 }
 .bh_footer_content_row1_address p {
   line-height: 1.8em;
@@ -885,13 +909,35 @@ body img {
 .bh_footer_content_row2 {
   flex-basis: 100%;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   flex-wrap: wrap;
+  gap: 20px;
+  flex-direction: column-reverse;
+}
+@media screen and (min-width: 767px) {
+  .bh_footer_content_row2 {
+    flex-direction: row;
+    justify-content: space-between;
+  }
 }
 .bh_footer_content_row2_copy {
+  flex-basis: 100%;
   font-size: 1em;
   font-family: "Bebas Neue", cursive;
+}
+@media screen and (min-width: 767px) {
+  .bh_footer_content_row2_copy {
+    flex-basis: unset;
+  }
+}
+.bh_footer_content_row2_social {
+  flex-basis: 100%;
+}
+@media screen and (min-width: 767px) {
+  .bh_footer_content_row2_social {
+    flex-basis: unset;
+  }
 }
 .bh_footer_content_row2_social ul {
   display: flex;
@@ -920,7 +966,7 @@ body img {
 }
 .bh_footer_attribution {
   text-align: center;
-  margin-bottom: 20px;
+  margin: 20px 0;
   font-family: "Bebas Neue", cursive;
   font-size: 0.8em;
 }

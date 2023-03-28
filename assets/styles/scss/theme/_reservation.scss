@@ -38,7 +38,7 @@
                     height: 200px;
                     @include absolute(unset, unset);
                     right: -40px;
-                    bottom: 0;
+                    bottom: 5%;
 
                     @include setResponsiveDesign($breakpoint-desktop-sd) {
                         height: 450px;

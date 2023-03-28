@@ -4,7 +4,6 @@
         margin-top: 120px;
 
         &_content {
-            margin: 40px;
             background-color: $color-black;
             @include relative;
 
@@ -27,17 +26,29 @@
 
             &_row1 {
                 @include flex1;
-                @include flex(space-between, flex-end);
+                @include flex;
+                gap: 40px;
                 margin-top: 40px;
 
+                @include setResponsiveDesign($breakpoint-tablet-landscape) {
+                    justify-content: space-between;
+                }
+
                 &_info {
-                    width: 40%;
+                    @include flex1;
+
+                    @include setResponsiveDesign($breakpoint-tablet-landscape) {
+                        @include flexBasis(unset);
+                        width: 40%;
+                    }
 
                     &_title {
                         margin-bottom: 40px;
 
                         img {
-                            width: 410px;
+                            @include setResponsiveDesign($breakpoint-mobile) {
+                                width: 410px;
+                            }
                         }
                     }
 
@@ -47,9 +58,18 @@
                 }
 
                 &_address {
-                    width: 30%;
+                    @include flex1;
                     font-family: $font-bebas-neue;
-                    font-size: 1.4em;
+
+                    @include setResponsiveDesign($breakpoint-tablet-landscape) {
+                        @include flexBasis(unset);
+                        width: 40%;                        
+                        font-size: 1.4em;
+                    }
+
+                    @include setResponsiveDesign($breakpoint-desktop-sd) {
+                        width: 30%;
+                    }
 
                     p {
                         line-height: 1.8em;
@@ -67,14 +87,32 @@
 
             &_row2 {
                 @include flex1;
-                @include flex(space-between);
+                @include flex;
+                gap: 20px;
+                flex-direction: column-reverse;
+
+                @include setResponsiveDesign($breakpoint-tablet) {
+                    flex-direction: row;
+                    justify-content: space-between;
+                }
 
                 &_copy {
+                    @include flex1;
                     font-size: 1em;
                     font-family: $font-bebas-neue;
+
+                    @include setResponsiveDesign($breakpoint-tablet) {
+                        @include flexBasis(unset);
+                    }
                 }
 
                 &_social {
+                    @include flex1;
+
+                    @include setResponsiveDesign($breakpoint-tablet) {
+                        @include flexBasis(unset);
+                    }
+
                     ul {
                         @include flex;
                         gap: 20px;
@@ -102,7 +140,7 @@
 
         &_attribution {
             text-align: center;
-            margin-bottom: 20px;
+            margin: 20px 0;
             font-family: $font-bebas-neue;
             font-size: 0.8em;
 
