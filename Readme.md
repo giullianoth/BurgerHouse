@@ -19,7 +19,7 @@ Esta é uma página web para uma lanchonete fictícia, chamada Burger House. Con
 - [Layout](#layout)
 - [Tecnologias utilizadas | Technologies used](#tecnologias-utilizadas--technologies-used)
 - [Como instalar | How to install](#como-instalar--how-to-install)
-- 
+- [Autor | Author](#autor--author)
 
 ## Status do projeto | Project status
 
@@ -67,7 +67,6 @@ _**Note:** As this is a project for academic purposes, the links on the page wil
 - [CSS 3](https://developer.mozilla.org/pt-BR/docs/Web/CSS)
 - [JavaScript](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript)
 - [Sass](https://sass-lang.com/)
-- [Autor | Author](#autor--author)
 
 Vale lembrar que foram aplicados o uso de tags semânticas ao HTML, para tornar a página com acessibilidade facilitada e seguir as boas práticas do desenvolvimento web.
 
