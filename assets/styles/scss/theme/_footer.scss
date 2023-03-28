@@ -7,6 +7,10 @@
             background-color: $color-black;
             @include relative;
 
+            @include setResponsiveDesign($breakpoint-tablet) {
+                margin: 40px;
+            }
+
             .background {
                 @include absoluteFull;
                 @include backgroundImage("../../images/footer.jpg");
@@ -142,7 +146,11 @@
             text-align: center;
             margin: 20px 0;
             font-family: $font-bebas-neue;
-            font-size: 0.8em;
+            font-size: 0.8em;            
+
+            @include setResponsiveDesign($breakpoint-tablet) {
+                margin-top: 0;
+            }
 
             a {
                 color: $color-fire-brick;
