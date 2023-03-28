@@ -9,9 +9,9 @@
 
 ---
 
-Esta é uma página web para uma lanchonete fictícia, chamada Burger House. Construída para fins acadêmicos, foram aplicadas as tecnologias e padrões do web design. Esse é um layout obtido pelo site Freepik.
+Esta é uma página web para uma lanchonete fictícia, chamada Burger House. Construída para fins acadêmicos, foram aplicadas as tecnologias e padrões do web design. Esse é um layout obtido pelo site [Freepik](https://www.freepik.com/).
 
-*This is a web page for a fictional burger joint called the Burger House. Built for academic purposes, web design technologies and standards were applied. This is a layout obtained by the Freepik website.*
+*This is a web page for a fictional burger joint called the Burger House. Built for academic purposes, web design technologies and standards were applied. This is a layout obtained by the [Freepik](https://www.freepik.com/) website.*
 
 ## Status do projeto | Project status
 
