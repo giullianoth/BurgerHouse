@@ -1,4 +1,4 @@
-# Burger House Wem Design Project
+# Burger House Web Design Project
 
 ![Cover](assets/images/screenshots/cover.png)
 
