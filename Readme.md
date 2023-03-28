@@ -13,6 +13,14 @@ Esta é uma página web para uma lanchonete fictícia, chamada Burger House. Con
 
 *This is a web page for a fictional burger joint called the Burger House. Built for academic purposes, web design technologies and standards were applied. This is a layout obtained by the [Freepik](https://www.freepik.com/) website.*
 
+## Índice | Index
+
+- [Status do projeto | Project status](#status-do-projeto--project-status)
+- [Layout](#layout)
+- [Tecnologias utilizadas | Technologies used](#tecnologias-utilizadas--technologies-used)
+- [Como instalar | How to install](#como-instalar--how-to-install)
+- 
+
 ## Status do projeto | Project status
 
 Projeto finalizado, sendo aberto a propostas de melhorias ou correções.
@@ -51,12 +59,15 @@ Você também pode conferir a página acessando este link: [https://burger-house
 
 _**Note:** As this is a project for academic purposes, the links on the page will not work, except for the last two located at the footer._
 
+## Tecnologias utilizadas | Technologies used
+
 *The following technologies were used to build this page:*
 
 - [HTML 5](https://developer.mozilla.org/pt-BR/docs/Web/HTML)
 - [CSS 3](https://developer.mozilla.org/pt-BR/docs/Web/CSS)
 - [JavaScript](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript)
 - [Sass](https://sass-lang.com/)
+- [Autor | Author](#autor--author)
 
 Vale lembrar que foram aplicados o uso de tags semânticas ao HTML, para tornar a página com acessibilidade facilitada e seguir as boas práticas do desenvolvimento web.
 
