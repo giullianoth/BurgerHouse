@@ -1,5 +1,7 @@
 # Burger House Wem Design Project
 
+![Cover](assets/images/screenshots/cover.png)
+
 [![HTML 5](https://img.shields.io/badge/HTML5-E34F26?style=flat&logo=html5&logoColor=white)](https://developer.mozilla.org/pt-BR/docs/Web/HTML)
 [![CSS 3](https://img.shields.io/badge/CSS3-1572B6?style=flat&logo=css3&logoColor=white)](https://developer.mozilla.org/pt-BR/docs/Web/CSS)
 [![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat&logo=javascript&logoColor=black)](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript)
@@ -23,7 +25,23 @@ Construído a partir do método *mobile-first*, o projeto é responsivo, ou seja
 
 *Built from the mobile-first method, the project is responsive, that is, it is adaptable to the most varied sizes and screen resolutions, as shown below.*
 
-[imagem]
+![Screenshot in 375px](assets/images/screenshots/screenshot_375px.png)
+
+Captura de tela em 375px | *Screenshot in 375px*
+
+---
+
+![Screenshot in 768px](assets/images/screenshots/screenshot_768px.png)
+
+Captura de tela em 768px | *Screenshot in 768px*
+
+---
+
+![Screenshot in 1440px](assets/images/screenshots/screenshot_1440px.png)
+
+Captura de tela em 1440px | *Screenshot in 1440px*
+
+---
 
 Você também pode conferir a página acessando este link: [https://burger-house-five.vercel.app/](https://burger-house-five.vercel.app/).
 
